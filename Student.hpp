@@ -9,8 +9,8 @@ class Student
    uint64_t index;
 
 public:
-   Student() {}
-   ~Student() {}
+   Student();
+   ~Student();
 
    void setName(std::string);
    void setSurname(std::string);

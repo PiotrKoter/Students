@@ -12,6 +12,6 @@ void Student::setIndex(uint64_t i) { index = i; }
 
 std::string Student::getName() { return name; }
 
-std::string Student::setSurname() { return surname; }
+std::string Student::getSurname() { return surname; }
 
-uint64_t Student::setIndex() { return index; }
+uint64_t Student::getIndex() { return index; }
