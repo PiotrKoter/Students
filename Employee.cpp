@@ -1,7 +1,7 @@
 #include "Employee.hpp"
 
-Employee::Employee(std::string n, std::string s, float sa) :
-	name(n), surname(s), salary(sa) {}
+Employee::Employee(std::string n, std::string s, float sa)
+    : name(n), surname(s), salary(sa) {}
 
 Employee::Employee() {}
 
