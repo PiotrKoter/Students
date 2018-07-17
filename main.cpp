@@ -14,7 +14,13 @@ int main()
     base.addNewStudent(s3);
    
     base.displayStudentList();
+
     base.sortStudentsByIndex();
+
+    base.displayStudentList();
+
+    base.removeStudentByIndex(225587);
+
     base.displayStudentList();
 
     return 0;
