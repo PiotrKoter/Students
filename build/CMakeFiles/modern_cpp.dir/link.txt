@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/modern_cpp.dir/Student.cpp.o CMakeFiles/modern_cpp.dir/main.cpp.o CMakeFiles/modern_cpp.dir/DataBase.cpp.o  -o modern_cpp -rdynamic 

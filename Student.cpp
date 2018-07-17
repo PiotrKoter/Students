@@ -1,7 +1,6 @@
-#pragma once
 #include "Student.hpp"
 
-Student(std::string n, std::string s, uint64_t i):
+Student::Student(std::string n, std::string s, uint64_t i):
     name(n), surname(s), index(i) {}
 
 Student::Student() {}
