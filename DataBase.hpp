@@ -6,7 +6,7 @@
 
 class DataBase
 {
-    vector<Student> studentBase;
+    std::vector<Student> studentBase;
 
  public:
     void addNewStudent(Student);

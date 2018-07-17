@@ -9,6 +9,7 @@ class Student
     uint64_t index;
 
 public:
+    Student(std::string, std::string, uint64_t);
     Student();
     ~Student();
 
