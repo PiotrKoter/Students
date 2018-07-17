@@ -13,6 +13,9 @@ int main()
     base.addNewStudent(s2);
     base.addNewStudent(s3);
    
-   
+    base.displayStudentList();
+    base.sortStudentsByIndex();
+    base.displayStudentList();
+
     return 0;
 }

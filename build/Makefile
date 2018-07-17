@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/dzastina/students/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named modern_cpp
+# Target rules for targets named students
 
 # Build rule for target.
-modern_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 modern_cpp
-.PHONY : modern_cpp
+students: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 students
+.PHONY : students
 
 # fast build rule for target.
-modern_cpp/fast:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/build
-.PHONY : modern_cpp/fast
+students/fast:
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/build
+.PHONY : students/fast
 
 DataBase.o: DataBase.cpp.o
 
@@ -129,7 +129,7 @@ DataBase.o: DataBase.cpp.o
 
 # target to build an object file
 DataBase.cpp.o:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/DataBase.cpp.o
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/DataBase.cpp.o
 .PHONY : DataBase.cpp.o
 
 DataBase.i: DataBase.cpp.i
@@ -138,7 +138,7 @@ DataBase.i: DataBase.cpp.i
 
 # target to preprocess a source file
 DataBase.cpp.i:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/DataBase.cpp.i
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/DataBase.cpp.i
 .PHONY : DataBase.cpp.i
 
 DataBase.s: DataBase.cpp.s
@@ -147,7 +147,7 @@ DataBase.s: DataBase.cpp.s
 
 # target to generate assembly for a file
 DataBase.cpp.s:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/DataBase.cpp.s
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/DataBase.cpp.s
 .PHONY : DataBase.cpp.s
 
 Student.o: Student.cpp.o
@@ -156,7 +156,7 @@ Student.o: Student.cpp.o
 
 # target to build an object file
 Student.cpp.o:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/Student.cpp.o
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/Student.cpp.o
 .PHONY : Student.cpp.o
 
 Student.i: Student.cpp.i
@@ -165,7 +165,7 @@ Student.i: Student.cpp.i
 
 # target to preprocess a source file
 Student.cpp.i:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/Student.cpp.i
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/Student.cpp.i
 .PHONY : Student.cpp.i
 
 Student.s: Student.cpp.s
@@ -174,7 +174,7 @@ Student.s: Student.cpp.s
 
 # target to generate assembly for a file
 Student.cpp.s:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/Student.cpp.s
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/Student.cpp.s
 .PHONY : Student.cpp.s
 
 main.o: main.cpp.o
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/modern_cpp.dir/build.make CMakeFiles/modern_cpp.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/students.dir/build.make CMakeFiles/students.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -210,9 +210,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... modern_cpp"
+	@echo "... rebuild_cache"
+	@echo "... students"
 	@echo "... DataBase.o"
 	@echo "... DataBase.i"
 	@echo "... DataBase.s"

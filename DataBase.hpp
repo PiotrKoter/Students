@@ -12,5 +12,6 @@ class DataBase
     void addNewStudent(Student);
     void sortStudentsByIndex();
     void removeStudentByIndex(uint64_t);
+    void displayStudentList();
 
 };

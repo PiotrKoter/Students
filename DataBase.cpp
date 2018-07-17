@@ -35,3 +35,16 @@ void DataBase::removeStudentByIndex(uint64_t idx)
         }
     }
 }
+
+void DataBase::displayStudentList()
+{
+    std::cout << "LISTA STUDENTOW:" << std::endl;
+    for (int i = 0; i < studentBase.size(); ++i)
+    {
+        std::cout << i+1 << ". " << studentBase.at(i).getName() << "  "
+                  << studentBase.at(i).getSurname() << "  "
+                  << studentBase.at(i).getIndex() << std::endl;
+    }
+
+    std::cout << std::endl;
+}
