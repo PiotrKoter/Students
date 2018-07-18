@@ -1,7 +1,5 @@
 #include "DataBase.hpp"
 
-
-
 void DataBase::addNewStudent(Student s)
 {
     studentBase.push_back(s);
