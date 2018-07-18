@@ -12,15 +12,16 @@ class Student
 
 public:
     Student(std::string, std::string, uint64_t);
+    Student();
     ~Student();
 
     void setName(std::string);
     void setSurname(std::string);
     void setIndex(uint64_t);
 
-    std::string getName();
-    std::string getSurname();
-    uint64_t getIndex();
+    std::string getName() const;
+    std::string getSurname() const;
+    uint64_t getIndex() const;
 
 };
 
