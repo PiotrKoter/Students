@@ -12,7 +12,6 @@ class Student
 
 public:
     Student(std::string, std::string, uint64_t);
-    Student();
     ~Student();
 
     void setName(std::string);
