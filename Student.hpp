@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STUDENTS_STUDENT_H_
+#define STUDENTS_STUDENT_H_
 #include <iostream>
 #include <string>
 #include <stdint.h>
@@ -23,3 +24,5 @@ public:
     uint64_t getIndex();
 
 };
+
+#endif

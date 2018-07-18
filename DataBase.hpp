@@ -1,3 +1,5 @@
+#ifndef STUDENTS_DATABASE_H_
+#define STUDENTS_DATABASE_H_
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,3 +17,5 @@ class DataBase
     void displayStudentList();
 
 };
+
+#endif
