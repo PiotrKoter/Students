@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/students.dir/Student.cpp.o CMakeFiles/students.dir/main.cpp.o CMakeFiles/students.dir/DataBase.cpp.o  -o students -rdynamic 

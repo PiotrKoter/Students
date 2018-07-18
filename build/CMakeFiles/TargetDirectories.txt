@@ -1,3 +1,0 @@
-/home/dzastina/students/build/CMakeFiles/edit_cache.dir
-/home/dzastina/students/build/CMakeFiles/rebuild_cache.dir
-/home/dzastina/students/build/CMakeFiles/students.dir
