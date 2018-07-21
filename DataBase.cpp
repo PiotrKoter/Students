@@ -1,8 +1,11 @@
 #include "DataBase.hpp"
 
+
+
 void DataBase::addNewStudent(Student s)
 {
     studentBase.push_back(s);
+	
 }
 
 void DataBase::sortStudentsByIndex()
@@ -41,8 +44,27 @@ void DataBase::displayStudentList()
     {
         std::cout << i+1 << ". " << studentBase.at(i).getName() << "  "
                   << studentBase.at(i).getSurname() << "  "
-                  << studentBase.at(i).getIndex() << std::endl;
+                  << studentBase.at(i).getIndex() << "  "
+				  << studentBase.at(i).getSrednia() << std::endl;
     }
 
     std::cout << std::endl;
+}
+
+void DataBase::addNewEmployee(Employee e)
+{
+	employeeBase.push_back(e);
+}
+
+void DataBase::displayEmployeeList()
+{
+	std::cout << "LISTA PRACOWNIKOW:" << std::endl;
+	for (int i = 0; i < employeeBase.size(); ++i)
+	{
+		std::cout << i + 1 << ". " << employeeBase.at(i).getName() << "  "
+			<< employeeBase.at(i).getSurname() << "  "
+			<< employeeBase.at(i).getSalary() << std::endl;
+	}
+
+	std::cout << std::endl;
 }

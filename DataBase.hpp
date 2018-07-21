@@ -1,11 +1,11 @@
-#ifndef STUDENTS_DATABASE_H_
-#define STUDENTS_DATABASE_H_
 #include "Student.hpp"
+#include "Employee.hpp"
 #include <vector>
 
 class DataBase
 {
     std::vector<Student> studentBase;
+	std::vector<Employee> employeeBase;
 
  public:
     void addNewStudent(Student);
@@ -13,6 +13,7 @@ class DataBase
     void removeStudentByIndex(uint64_t);
     void displayStudentList();
 
+	void addNewEmployee(Employee);
+	void displayEmployeeList();
 };
 
-#endif
