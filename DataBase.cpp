@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
+
 void DataBase::addNewStudent(Student s) { studentBase.push_back(s); }
 
 void DataBase::sortStudentsByIndex() {
@@ -51,13 +52,37 @@ void DataBase::displayEmployeeList() {
   std::cout << std::endl;
 }
 
+/*
 void DataBase::write_students() {
 
-  ofstream file;
-  file.open("DATABASE.txt");
+  ofstream myFile;
+  myFile.open("DataBase.csv");
   for (int i = 0; i < studentBase.size(); i++) {
-    file.write((char *)&studentBase[i], studentBase.size() * sizeof(Student));
+    myFile << studentBase.at(i).getName() << ","
+           << studentBase.at(i).getSurname() << ","
+           << studentBase.at(i).getIndex() << ","
+           << studentBase.at(i).getSrednia() << endl;
   }
+  myFile.close();
+}*/
 
-  file.close();
+void DataBase::read_students(Student s) {
+  studentBase.push_back(s);
+  string item1, item2, item3, item4;
+  int count = 0;
+  ifstream myFile;
+  myFile.open("DataBase.csv");
+  while (!myFile.eof()) {
+    getline(myFile, item1, ',');
+    getline(myFile, item2, ',');
+    getline(myFile, item3, ',');
+    getline(myFile, item4, '\n');
+    count++;
+
+    cout << item1 << endl;
+    cout << item2 << endl;
+    cout << item3 << endl;
+    cout << item4 << endl;
+    cout << count << endl;
+  }
 }

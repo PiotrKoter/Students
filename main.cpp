@@ -25,6 +25,7 @@ int main() {
 
   base.displayStudentList();
   base.displayEmployeeList();
-  base.write_students();
+  // base.write_students();
+  base.read_students(s1);
   return 0;
 }

@@ -16,5 +16,6 @@ public:
 
   void addNewEmployee(Employee);
   void displayEmployeeList();
-  void write_students();
+  //  void write_students();
+  void read_students(Student);
 };
