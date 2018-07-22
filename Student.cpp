@@ -4,7 +4,6 @@ Student::Student(std::string n, std::string s, uint64_t i, float sr)
     : name(n), surname(s), index(i), srednia(sr) {}
 
 Student::Student() {}
-
 Student::~Student() {}
 
 void Student::setName(std::string n) { name = n; }

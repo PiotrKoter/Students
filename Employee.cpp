@@ -3,8 +3,6 @@
 Employee::Employee(std::string n, std::string s, float sa)
     : name(n), surname(s), salary(sa) {}
 
-Employee::Employee() {}
-
 Employee::~Employee() {}
 
 void Employee::setName(std::string n) { name = n; }

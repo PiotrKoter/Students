@@ -1,5 +1,7 @@
 #include "Employee.hpp"
 #include "Student.hpp"
+#include <fstream>
+#include <iostream>
 #include <vector>
 
 class DataBase {
@@ -14,4 +16,5 @@ public:
 
   void addNewEmployee(Employee);
   void displayEmployeeList();
+  void write_students();
 };

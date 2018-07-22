@@ -1,5 +1,7 @@
 #include "DataBase.hpp"
-
+#include <fstream>
+#include <iostream>
+using namespace std;
 void DataBase::addNewStudent(Student s) { studentBase.push_back(s); }
 
 void DataBase::sortStudentsByIndex() {
@@ -47,4 +49,15 @@ void DataBase::displayEmployeeList() {
   }
 
   std::cout << std::endl;
+}
+
+void DataBase::write_students() {
+
+  ofstream file;
+  file.open("DATABASE.txt");
+  for (int i = 0; i < studentBase.size(); i++) {
+    file.write((char *)&studentBase[i], studentBase.size() * sizeof(Student));
+  }
+
+  file.close();
 }

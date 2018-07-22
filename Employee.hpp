@@ -8,7 +8,6 @@ class Employee {
 
 public:
   Employee(std::string, std::string, float);
-  Employee();
   ~Employee();
 
   void setName(std::string);
